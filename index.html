@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en">  <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BURGER HOUSE</title>
     <link rel="shortcut icon" type="website-icon" href="images/Main-logo.svg" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
-    <section class="main">
-      <header class="header">
+    <section class="main">      <header class="header">
         <div class="container">
           <div class="logo">
             <img src="images/Logo.png" alt="Logo" />
           </div>
-          <nav class="menu">
+          <nav class="menu" id="mobile-menu">
             <ul class="menu-list">
               <li class="menu-item">
                 <a data-link="why">Why with us</a>
@@ -27,6 +26,11 @@
               </li>
             </ul>
           </nav>
+          <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
           <div class="currency" title="Change the currency" id="change-currency">
             $
           </div>
@@ -84,11 +88,9 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="products" id="products">
+    </section>    <section class="products" id="products">
       <div class="container">
-        <div class="products-title"choose your burger</div>
+        <div class="products-title common-title">Choose your burger</div>
         <div class="products-items">
           <div class="products-item">
             <div class="products-item-image">

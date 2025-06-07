@@ -2,10 +2,26 @@ document.getElementById("main-action-button").onclick = function () {
    document.getElementById("products").scrollIntoView({ behavior: "smooth" });
 }
 
+// Mobile menu toggle functionality
+document.getElementById("menu-toggle").onclick = function() {
+   const menu = document.getElementById("mobile-menu");
+   const toggle = document.getElementById("menu-toggle");
+   
+   menu.classList.toggle("active");
+   toggle.classList.toggle("active");
+}
+
+// Close mobile menu when clicking on menu items
 let links = document.querySelectorAll(".menu-item > a");
 for (let i = 0; i < links.length; i++) {
    links[i].onclick = function () {
       document.getElementById(links[i].getAttribute("data-link")).scrollIntoView({ behavior: "smooth" });
+      
+      // Close mobile menu after clicking
+      const menu = document.getElementById("mobile-menu");
+      const toggle = document.getElementById("menu-toggle");
+      menu.classList.remove("active");
+      toggle.classList.remove("active");
    }
 }
 
